@@ -17,10 +17,31 @@ function App() {
 
   body.style.backgroundColor = cardInfo.mainColor;
 
+  function showFullScreenImage(image) {
+    var overlay = document.createElement("div");
+    overlay.classList.add("fullscreen-overlay");
+
+    var fullScreenImage = document.createElement("img");
+    fullScreenImage.classList.add("fullscreen-img");
+    fullScreenImage.src = image;
+
+    overlay.addEventListener("click", function () {
+      document.body.removeChild(overlay);
+    });
+
+    overlay.appendChild(fullScreenImage);
+    document.body.appendChild(overlay);
+  }
+
   return (
     <>
       <div className="card">
-        <img className="cover-img" src={cardInfo.coverImage} alt="Cover Image" />
+        <img 
+          className="cover-img" 
+          onClick={() => showFullScreenImage(cardInfo.coverImage)} 
+          src={cardInfo.coverImage} 
+          alt="Cover Image" 
+        />
         <h3 className="category" style={{ backgroundColor: cardInfo.mainColor }}>
           {cardInfo.category}
         </h3>
@@ -28,7 +49,12 @@ function App() {
         <h1 className='title'>{cardInfo.title}</h1>
         <p className='description'>{cardInfo.description}</p>
         <div className="user-info">
-          <img className='user-img' src={cardInfo.userLogo} alt="User Logo" />
+          <img 
+            className='user-img' 
+            onClick={() => showFullScreenImage(cardInfo.userLogo)} 
+            src={cardInfo.userLogo} 
+            alt="User Logo" 
+          />
           <h4 className='user-name'>{cardInfo.userName}</h4>
         </div>
       </div>

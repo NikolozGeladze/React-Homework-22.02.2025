@@ -92,6 +92,33 @@ body {
     font-weight: bold;
 }
 
+.card .user-info .user-img, .card .cover-img {
+    cursor: pointer;
+}
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.297);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    min-width: 50%;
+    min-height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
 @media (max-width: 480px) {
     .card {
         width: 90%;
