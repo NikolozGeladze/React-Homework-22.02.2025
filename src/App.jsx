@@ -8,7 +8,7 @@ function App() {
     category: 'Learning',
     publishDate: '21 Dec 2023',
     title: 'HTML & CSS foundations',
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque amet accusamus rem voluptates maiores sed neque repellat, numquam quas quis ad cupiditate quidem. Repellat adipisci alias a, quibusdam beatae doloremque.",
+    description: "These languages are the backbone of every website, defining structure, content, and presentation.",
     userLogo: userLogo,
     userName: 'Nikoloz Geladze'
   }
@@ -18,7 +18,7 @@ function App() {
       <div className="card">
         <img className="cover-img" src={cardInfo.coverImage} alt="Cover Image"/>
         <h3 className='category'>{cardInfo.category}</h3>
-        <h5 className='publish-date'>{cardInfo.publishDate}</h5>
+        <p className='publish-date'>Published {cardInfo.publishDate}</p>
         <h1 className='title'>{cardInfo.title}</h1>
         <p className='description'>{cardInfo.description}</p>
         <div className="user-info">
