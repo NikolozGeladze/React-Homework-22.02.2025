@@ -3,7 +3,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #F4D04E;
 }
 
 .card {
@@ -32,7 +31,6 @@ body {
 
 .card .category {
     font-size: 20px;
-    background-color: #F4D04E;
     padding: 5px 10px;
     width: fit-content;
     border-radius: 5px;
