@@ -60,7 +60,7 @@ body {
 .card h1.title,
 .card p.description,
 .card .user-info .user-img,
-.card .user-info .user-name{
+.card .user-info .user-name {
     transition: all 0.3s ease;
 }
 
@@ -68,10 +68,10 @@ body {
 .card p.publish-date:hover,
 .card h1.title:hover,
 .card .description:hover,
-.card .user-info .user-img:hover, 
-.card .user-info .user-name:hover{
+.card .user-info .user-img:hover,
+.card .user-info .user-name:hover {
     transform: scale(1.05) rotate3d(0, 0, 0, 25deg);
-    transform-origin:0%;
+    transform-origin: 0%;
 }
 
 .card .user-info {
@@ -90,4 +90,24 @@ body {
 .card .user-info h4.user-name {
     font-size: 18px;
     font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card:hover,
+    .card .category:hover,
+    .card p.publish-date:hover,
+    .card h1.title:hover,
+    .card .description:hover,
+    .card .user-info .user-img:hover,
+    .card .user-info .user-name:hover {
+        pointer-events: none;
+    }
 }
