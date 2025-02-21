@@ -125,6 +125,15 @@ body {
         margin: auto;
         padding: 10px;
     }
+    .card:hover,
+    .card .category:hover,
+    .card p.publish-date:hover,
+    .card h1.title:hover,
+    .card .description:hover,
+    .card .user-info .user-img:hover,
+    .card .user-info .user-name:hover {
+        transform: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -135,6 +144,6 @@ body {
     .card .description:hover,
     .card .user-info .user-img:hover,
     .card .user-info .user-name:hover {
-        pointer-events: none;
+        transform: none;
     }
 }
